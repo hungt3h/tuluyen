@@ -1,0 +1,31 @@
+.background {
+    background: black url('./img/image2.jpg');
+    opacity: 0.3;
+}
+.text {
+    text-align: center;
+    margin: auto;
+    margin-top: 200px;
+    font-family: sans-serif;
+    width: 1200px;
+    height: 400px;
+}
+h1 {
+    font-weight: 100;
+    color: white;
+}
+p {
+    color: white;
+}
+#button {
+    margin-top: 40px;
+}
+.button {
+    color: white;
+    border: 1px solid black;
+    font-size: 20px;
+    background: red;
+    width: 500px;
+    height: 60px;
+    border-radius: 6px;
+}
