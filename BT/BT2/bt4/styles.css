@@ -1,18 +1,21 @@
-.background {
-    border: 35px solid rgb(0, 0, 0);
-    text-align: center;
+.container {
+    width: 800px;
+    height: 500px;
     margin: auto;
-    margin-top: 200px;
+}
+.background {
     font-family: sans-serif;
     background: rgb(199, 199, 199);
     width: 800px;
     height: 500px;
 }
-.input {
-    border: none;
-    border-radius: 6px;
-    width: 420px;
-    height: 50px;
+.background h1 {
+    font-size: 48px;
+    font-weight: 100;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
 }
 .button {
     margin-top: 6px;
