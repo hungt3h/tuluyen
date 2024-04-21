@@ -1,0 +1,26 @@
+.container {
+    margin: 0 auto;
+}
+.btn {
+    background-color: #ffffff;
+    border: 0.2px solid rgb(190, 190, 190);
+    color: blue;
+    padding: 15px 32px;
+    text-align: center;;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+}
+.btn:hover {
+    background-color: rgb(177, 177, 177);
+}
+.disabled {
+    color: gray;
+    background-color: gainsboro;
+    text-decoration: none;
+}
+.active {
+
+    color: white;
+    background-color: blue;
+}
