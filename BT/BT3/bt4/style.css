@@ -1,21 +1,20 @@
-.container {
-    margin: 0 auto;
+.content {
+    margin: 15px;
+    width: 500px;
 }
-.btn {
-    background-color: #ffffff;
-    border: 0.2px solid rgb(190, 190, 190);
-    color: blue;
-    padding: 15px 32px;
-    text-align: center;;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 0px;
-    float: left;
+.danger {
+    padding: 12px 20px;
+    background-color: rgb(255, 165, 165);
 }
-.btn:hover {
-    background-color: rgb(177, 177, 177);
+.succes {
+    padding: 12px 20px;
+    background-color: rgb(166, 255, 162);
 }
-.disabled {
-    color: gray;
-    background-color: gainsboro;
+.warning {
+    padding: 12px 20px;
+    background-color: rgb(255, 220, 155);
+}
+.primary {
+    padding: 12px 20px;
+    background-color: #a5c9ff;
 }

@@ -1,21 +1,27 @@
 .container {
-    margin: 0 auto;
+    border: 1px solid black;
+    width: fit-content;
+    margin: auto;
+    margin-top: 200px;
+    border-radius: 6px;
+}
+.image-cap {
+    padding: 70px 100px;
+    border: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: white;
+    background-color: rgb(131, 131, 131);
+}
+.margin {
+    margin: 12px;
 }
 .btn {
-    background-color: #ffffff;
-    border: 0.2px solid rgb(190, 190, 190);
-    color: blue;
-    padding: 15px 32px;
-    text-align: center;;
-    font-size: 16px;
-    cursor: pointer;
-    margin-left: 0px;
-    float: left;
-}
-.btn:hover {
-    background-color: rgb(177, 177, 177);
-}
-.disabled {
-    color: gray;
-    background-color: gainsboro;
+    padding: 8px 28px;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    color: white;
+    background: dodgerblue;
+    border: none;
+    border-radius: 4px;
 }
