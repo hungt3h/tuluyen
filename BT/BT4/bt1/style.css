@@ -1,0 +1,39 @@
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 100px;
+}
+.menu {
+    width: 320px;
+    height: 400px;
+    background-color: rgb(211, 184, 255);
+    text-align: center;
+    padding: 10px;
+}
+.btn {
+    background-color: rgb(255, 231, 164);
+    margin: 5px 0px;
+    width: 320px;
+    font-size: 32px;
+    padding: 10px 0px;
+    position: relative;
+}
+.btn-hover {
+    width: 320px;
+    font-size: 32px;
+    padding: 10px 0px;
+}
+.hover {
+    position: relative;
+    display: inline-block;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    min-width: 342px;
+    z-index: 1;
+    left: 100%;
+    top: 5%;
+}  
+.menu .hover:hover .dropdown {
+    display: block;
+}
