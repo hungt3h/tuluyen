@@ -16,11 +16,13 @@
     font-size: 32px;
     padding: 10px 0px;
     position: relative;
+    cursor: pointer;
 }
 .btn-hover {
     width: 320px;
     font-size: 32px;
     padding: 10px 0px;
+    cursor: pointer;
 }
 .hover {
     position: relative;

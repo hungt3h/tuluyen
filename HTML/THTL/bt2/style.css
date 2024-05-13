@@ -1,0 +1,33 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html, body {
+    height: 100%;
+}
+.container {
+    text-align: center;
+    height: 100%;
+}
+.header,
+.footer {
+    height: 20%;
+}
+.body {
+    display: flex;
+    height: 60%;
+}
+.left-sidebar,
+.right-sidebar  {
+    width: 20%;
+}
+.content {
+    width: 60%;
+}
+.item {
+    margin: 4px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

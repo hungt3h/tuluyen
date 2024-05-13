@@ -2,3 +2,21 @@ h1 {
     color: red;
     font-family: "Roboto", sans-serif;
 }
+.text {
+    margin: auto;
+    display: flex;
+    width: 500px;
+    height: 100px;
+}
+.container {
+    margin: 500px 0px 500px 0px;
+    background: pink;
+    display: flex;
+    
+}
+.box {
+    width: 30%;
+    height: 100px;
+    background: red;
+    border: 1px solid black;
+}

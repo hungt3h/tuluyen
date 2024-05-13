@@ -1,0 +1,19 @@
+.container {
+    background-color: pink;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+.logo { 
+    padding: 10px;
+    background-color: red;
+    border: 1px solid black;
+}
+.sub-menu-pages {
+    display: flex;
+}
+.pages {
+    padding: 10px;
+    background-color: red;
+    border: 1px solid black;
+}
