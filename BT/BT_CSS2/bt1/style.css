@@ -1,0 +1,31 @@
+.container {
+    margin-top: 200px;
+}
+.btn {
+    background-color: #ffffff;
+    border: 0.2px solid rgb(190, 190, 190);
+    color: blue;
+    padding: 15px 32px;
+    text-align: center;;
+    font-size: 16px;
+    float: left;
+    border-left: none;
+}
+.btn:hover {
+    background-color: rgb(177, 177, 177);
+}
+.disabled {
+    color: gray;
+    background-color: gainsboro;
+    text-decoration: none;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+.active {
+    color: white;
+    background-color: blue;
+}
+.next {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
