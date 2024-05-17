@@ -1,0 +1,35 @@
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.sign-up {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.text-pages {
+    padding: 8px;
+    color: black;
+    text-decoration: none;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 22px;
+}
+.page {
+    width: 30%;
+}
+.logo {
+    text-align: center;
+    width: 40%;
+}
+.icon {
+    text-align: end;
+    width: 30%;
+}
+.menu {
+    text-align: center;
+    padding: 8px;
+}
