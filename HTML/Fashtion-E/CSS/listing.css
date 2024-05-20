@@ -135,10 +135,11 @@ li {
     margin-right: 5px;
 }
 .list {
+    font-size: 10px;
     margin-right: 4px;
     margin-bottom: 50px;
-    width: 200px;
-    height: 50px;
+    width: 120px;
+    height: 40px;
     border: 1px solid black;
     border-radius: 4px;
     display: flex;

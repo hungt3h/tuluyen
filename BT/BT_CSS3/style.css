@@ -66,8 +66,9 @@ li {
     background: rgb(118, 223, 255);
     border: 1px solid black;
     border-radius: 4px;
-    width: 100px;
-    height: 32px;
+    width: 70px;
+    height: 24px;
+    font-size: 8px;
 }
 .feature {
     border: 1px solid black;

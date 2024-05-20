@@ -124,6 +124,10 @@ ul {
 .img {
     width: 70%;
 }
+.img-detail {
+        width: 378px;
+        height: 468px;
+}
 .details {
     width: 30%;
 }
