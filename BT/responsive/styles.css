@@ -82,9 +82,72 @@ h2 {
     background: #A5FF96;
 }
 
+/* Từ 0px đến 719px */
+@media (max-width:719px){
+    .header {
+        padding: 0px 16px;
+    }
+    .file {
+        display: flex;
+        align-items: center;
+        margin: 0px 16px;
+        margin-bottom: 16px;
+    }
+    .search-box,
+    .menu {
+        display: none;
+    }
+    .item-profile {
+        border-radius: 16px;
+        margin: 0px 16px;
+    }
+    .img-profile {
+        width: 50%;
+        background: #E2E2E2;
+        padding: 8px 8px;
+        border-radius: 16px;
+    }
+    .information {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .img {
+        width: 95%;
+    }
+    .icon-profile {
+        display: flex;
+        margin: 16px;
+    }
+    .item {
+        display: flex;
+        margin: 16px 0px;
+        width: 100%;
+        border-radius: 16px;
+    }
+}
 
-
+/* Từ 1025px + */
 @media (min-width:1025px){
+    .item-yellow {
+        order: 1;
+    }
+    .item-blue {
+        order: 2;
+    }
+    .item-violet {
+        order: 3;
+    }
+    .item-green {
+        order: 4;
+    }
+    .item-red {
+        order: 5;
+    }
+    .item-cyan {
+        order: 6;
+    }
     .header {
         padding: 0px 24px;
     }
@@ -98,7 +161,7 @@ h2 {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        
+
     }
     h4 {
         font-size: 36px;
@@ -129,7 +192,7 @@ h2 {
         display: flex;
         flex-direction: column;
     }
-    
+
     .icon-infomation {
         display: flex;
         margin: 24px 8px;
@@ -155,7 +218,7 @@ h2 {
         align-items: center;
         border-radius: 50%;
     }
-    
+
     .text-information {
         margin-top: 18px;
         margin-left: 12px;
@@ -166,36 +229,36 @@ h2 {
     }
     .item {
         display: flex;
-        margin: 24px 0px;
+        margin: 12px 0px;
         width: 47.6%;
         border-radius: 16px;
     }
-    
+
     .img-profile {
         width: 50%;
         background: #E2E2E2;
         padding: 8px 8px;
         border-radius: 16px
     }
-    
+
     .information {
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    
+
     .img {
         width: 95%;
     }
-    
+
     .icon-profile {
         display: flex;
         margin: 16px;
     }
 }
 
-
+/* Từ 720px đến 1024px */
 @media (min-width:720px) and (max-width:1024px){
     .header {
         padding: 0px 24px;
@@ -210,7 +273,7 @@ h2 {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        
+
     }
     h4 {
         font-size: 24px;
@@ -240,7 +303,7 @@ h2 {
     .speaks {
         display: none;
     }
-    
+
     .icon-infomation {
         display: flex;
         margin: 4px 0px;
@@ -266,57 +329,44 @@ h2 {
         align-items: center;
         border-radius: 50%;
     }
-    
+
     .text-information {
         margin-top: 16px;
         margin-left: 8px;
     }
     .item {
         display: flex;
-        margin: 24px 0px;
+        margin: 12px 0px;
         width: 46.6%;
         border-radius: 16px;
     }
-    
+
     .img-profile {
         width: 50%;
         background: #E2E2E2;
         padding: 8px 8px;
         border-radius: 16px;
     }
-    
+
     .information {
         width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    
+
     .img {
         width: 95%;
     }
-    
+
     .icon-profile {
         display: flex;
         margin: 16px;
     }
 }
 
-
+/* Từ 510px đến 719px */
 @media (min-width:510px) and (max-width:719px){
-    .header {
-        padding: 0px 16px;
-    }
-    .file {
-        display: flex;
-        align-items: center;
-        margin: 0px 16px;
-        margin-bottom: 16px;
-    }
-    .search-box,
-    .menu {
-        display: none;
-    }
     h4 {
         font-size: 36px;
     }
@@ -325,10 +375,6 @@ h2 {
     }
     h5 {
         font-size: 18px;
-    }
-    .item-profile {
-        border-radius: 16px;
-        margin: 0px 16px;
     }
     .img-profile .icon-infomation {
         display: none;
@@ -342,7 +388,7 @@ h2 {
     .langue {
         display: flex;
     }
-    
+
     .icon-infomation {
         display: flex;
         margin: 24px 8px;
@@ -368,7 +414,7 @@ h2 {
         align-items: center;
         border-radius: 50%;
     }
-    
+
     .text-information {
         margin-top: 18px;
         margin-left: 12px;
@@ -377,61 +423,15 @@ h2 {
         flex-direction: column;
         justify-content: space-evenly;
     }
-    .item {
-        display: flex;
-        margin: 16px 0px;
-        width: 100%;
-        border-radius: 16px;
-    }
-    
-    .img-profile {
-        width: 50%;
-        background: #E2E2E2;
-        padding: 8px 8px;
-        border-radius: 16px;
-    }
-    
-    .information {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    .img {
-        width: 95%;
-    }
-    
-    .icon-profile {
-        display: flex;
-        margin: 16px;
-    }
 }
 
-
+/* Từ 360px đến 509px */
 @media (min-width:360px) and (max-width:509px){
-    .header {
-        padding: 0px 16px;
-    }
-    .file {
-        display: flex;
-        align-items: center;
-        margin: 0px 16px;
-        margin-bottom: 16px;
-    }
-    .search-box,
-    .menu {
-        display: none;
-    }
     h4 {
         font-size: 24px;
     }
     p {
         font-size: 16px;
-    }
-    .item-profile {
-        border-radius: 16px;
-        margin: 0px 16px;
     }
     .information .icon-infomation {
         display: none;
@@ -448,7 +448,7 @@ h2 {
     .speaks {
         display: none;
     }
-    
+
     .icon-infomation {
         display: flex;
         margin: 4px 0px;
@@ -474,38 +474,9 @@ h2 {
         align-items: center;
         border-radius: 50%;
     }
-    
+
     .text-information {
         margin-top: 16px;
         margin-left: 8px;
-    }
-    .item {
-        display: flex;
-        margin: 16px 0px;
-        width: 100%;
-        border-radius: 16px;
-    }
-    
-    .img-profile {
-        width: 50%;
-        background: #E2E2E2;
-        padding: 8px 8px;
-        border-radius: 16px;
-    }
-    
-    .information {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    
-    .img {
-        width: 95%;
-    }
-    
-    .icon-profile {
-        display: flex;
-        margin: 16px;
     }
 }
