@@ -149,6 +149,8 @@ li {
 .feature {
     display: flex;
 }
+
+/* footer */
 .link-footer {
     display: flex;
     flex-direction: column;
