@@ -1,3 +1,60 @@
 .footer {
     background: #F5F4F4;
 }
+
+/* CSS listing */
+.option-color {
+    width: 32px;
+    height: 32px;
+    background: black;
+    border-radius: 50%;
+}
+.color2 {
+    background: blue;
+}
+.color3 {
+    background: brown;
+}
+.color4 {
+    background: green;
+}
+.color5 {
+    background: gray;
+}
+.color6 {
+    background: orange;
+}
+.color7 {
+    background: pink;
+}
+.color8 {
+    background: red;
+}
+.color9 {
+    background: tan;
+}
+
+.c1 {
+    margin: 1px;
+    background-color: #514535;
+}
+.c2 {
+    margin: 1px;
+    background-color: #3A3840;
+}
+.c3 {
+    margin: 1px;
+    background-color: #8C7058;
+}
+.c4 {
+    margin: 1px;
+    background-color: #262525;
+}
+.box-size {
+    width: 46px;
+    height: 40px;
+    background-color: #F5F4F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
