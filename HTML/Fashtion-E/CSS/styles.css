@@ -58,3 +58,18 @@
     align-items: center;
     justify-content: center;
 }
+
+
+/* CSS details */
+
+.color-detais1 {
+    margin: 1px;
+    background: #113081;
+}
+.color-detais2 {
+    background: #7D3D0E;
+}
+
+ul {
+    list-style: none;
+}
