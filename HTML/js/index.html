@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT JS</title>
+</head>
+<body>
+    <div class="" onclick="java()">
+        Test:
+    </div>
+</body>
+
+<script>
+    function java() {
+        // Bai 1
+        var x = true;
+        var y = true;
+        var z = false;
+        console.log(x && y && z); // false
+        console.log(x && y && !z); // true
+        console.log((x && y) || z); // true
+        console.log((x && y) || !z); // true
+        console.log(x && (y || z)); // true
+        console.log(x && !(y || z)); // false
+        console.log(x && (y || !z)); // true
+        console.log(x && (!y || z)); // false
+
+        // Bai 2
+        var name = 'AAA';
+        var age = 20;
+        var isGood = true;
+        console.log(age + 10); // 30
+        console.log(age %3); // 2
+        console.log(name + 'BBB'); // AAABBB
+        console.log(!isGood); // false
+        console.log(name == 'aaa' && age >= 20); // false
+        console.log(name != 'aaa' && isGood); // true
+        console.log(!(age < 10) && !isGood); // false
+
+        // Bai 3
+        var a = 10;
+        var b = 20;
+        var c = 30;
+        var d = '40';
+        console.log(a + b + c); // 60
+        console.log(a - b / c); // 9.333333333333334
+        console.log(a - (b * c)); // -590
+        console.log(d - (a * b) - c); // -190
+        console.log(a + b + c + d); // 6040
+        console.log(d + a + b + c); // 40102030
+        console.log(d + a - b + c); // 4020
+        console.log(a - b + d - c); // -1070
+        console.log(d -c + a - b); // 0
+        console.log(a * b + d * c); // 1400
+    }
+</script>
+</html>
