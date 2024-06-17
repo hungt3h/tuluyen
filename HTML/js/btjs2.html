@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="dodai()">Nhập giá trị</button>
+    <hr>
+    <button onclick="dtbm()">Nhập điểm</button>
+    <hr>
+
+    <input id="month" type="number">
+    <button onclick="date()">Nhập tháng</button> -->
+    <button onclick="bmi()">Nhập</button>
+    <button onclick="pt()">Tính phương trình</button>
+</body>
+
+<script>
+    // function dodai() {
+    //     let s = prompt("Nhập S");
+
+    //     if (s.length >= 8.0) {
+    //         alert('Chuỗi này ok!!')
+    //     } else {
+    //         alert('Dài thêm tí nữa đê :))')
+    //     }
+    // }
+
+    // function dtbm() {
+    //     const score = prompt('Nhập điểm trung bình môn của bạn:');
+        
+    //     if (score >= 8) {
+    //         alert('Học sinh giỏi!!')
+    //     } else if (6.5 <= score && score < 8.0) {
+    //         alert('Học sinh khá!!')
+    //     } else if (score >= 5.0 && score < 6.5) {
+    //         alert('Học sinh trung bình!!')
+    //     } else if (score <= 4.0) {
+    //         alert('Học lại!!')
+    //     }
+        
+    // }
+
+    // function date() {
+    //     const month = document.getElementById("month");
+        
+    //     switch (month) {
+    //         case 1:
+    //             alert('tháng 1');
+    //             break;
+    //         case 2:
+    //             alert('tháng 2');
+    //             break;
+    //         case 3:
+    //             alert('tháng 3');
+    //             break;
+    //         case 4:
+    //             alert('tháng 4');
+    //             break;
+    //         case 5:
+    //             alert('tháng 5');
+    //             break;
+    //         case 6:
+    //             alert('tháng 6');
+    //             break;
+    //         case 7:
+    //             alert('tháng 7');
+    //             break;
+    //         case 8:
+    //             alert('tháng 8');
+    //             break;
+    //         default:
+    //             alert('Tháng không hợp lệ!!')
+    //     }
+    // }
+
+
+    function bmi() {
+        const w = prompt("Nhập cân nặng");
+        const h = prompt("Nhập chiều cao");
+
+        const BMI = w / h**2;
+
+        if (BMI < 18.5) {
+            alert('Nhẹ cân')
+        } else if (18.5 <= BMI && BMI < 23.0) {
+            alert('Bình thường')
+        } else if (23.0 <= BMI && BMI < 25.0) {
+            alert('Thừa cân')
+        } else if (BMI >= 25.0) {
+            alert('Béo phì')
+        }
+    }
+
+
+    function pt() {
+        const a = prompt("Nhập a");
+        const b = prompt("Nhập b");
+        const c = prompt("Nhập c");
+
+        const d = b ** 2 - (4 * a * c)
+        
+        if ((a === 0 && b === 0) || d < 0) {
+            alert('Phương trình vô nghiệm')
+        } else if (d == 0) {
+            const value = (-c)/b
+            console.log('Phương trình này có nghiệm kép là:', value);
+        } else {
+            const value1 = (-b + Math.sqrt(d)) / 2*a;
+            const value2 = (-b - Math.sqrt(d)) / 2*a;
+            console.log('Phương trình bậc 2 có nghiệm là:', value1, value2);
+        }
+    }
+</script>
+
+</html>
