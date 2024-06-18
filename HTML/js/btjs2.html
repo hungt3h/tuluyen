@@ -14,7 +14,11 @@
     <input id="month" type="number">
     <button onclick="date()">Nhập tháng</button> -->
     <button onclick="bmi()">Nhập</button>
+    <button onclick="tinhthue()">Tính lương</button>
+    <button onclick="timso()">Nhập số</button>
     <button onclick="pt()">Tính phương trình</button>
+    <button onclick="tinhhoahong()">Tính tiền hoa hồng</button>
+    
 </body>
 
 <script>
@@ -76,10 +80,11 @@
     //     }
     // }
 
-
+    // bai1
     function bmi() {
         const w = prompt("Nhập cân nặng");
         const h = prompt("Nhập chiều cao");
+        const e = prompt("nhaap tuoi")
 
         const BMI = w / h**2;
 
@@ -93,8 +98,42 @@
             alert('Béo phì')
         }
     }
+    // bai2
+    function tinhthue() {
+        const luong = prompt("Luong")
+        var TTN;
+        var LND;
 
+        if (luong == 15.0) {
+            TTN = (luong * 30) / 100;
+            LND = luong - TTN;
+            console.log('Thuế thu nhập là', TTN);
+            console.log('Số tiền lương thực sự là', LND);
+        } else if(luong <= 15.0 && luong >= 7) {
+            TTN = (luong * 20) / 100;
+            LND = luong - TTN;
+            console.log('Thuế thu nhập là', TTN);
+            console.log('Số tiền lương thực sự là', LND);
+        } else if(luong < 7) {
+            TTN = (luong * 10) / 100;
+            LND = luong - TTN;
+            console.log('Thuế thu nhập là', TTN);
+            console.log('Số tiền lương thực sự là', LND);
+        } else {
+            alert('Nhập hơi bị nhiều tiền rồi đấy !!')
+        }
+    }
 
+    // bài 3
+    function timso() {
+        var a = prompt('Số thứ nhất')
+        var b = prompt('Số thứ hai')
+        var c = prompt('Số thứ ba')
+
+        console.log("Số nhỏ nhất", Math.min(a, b, c));
+        console.log("Số lớn nhất", Math.max(a, b, c));
+    }
+    // bai4
     function pt() {
         const a = prompt("Nhập a");
         const b = prompt("Nhập b");
@@ -102,9 +141,9 @@
 
         const d = b ** 2 - (4 * a * c)
         
-        if ((a === 0 && b === 0) || d < 0) {
+        if ((a === 0 && b === 0 && c === 0) || d < 0) {
             alert('Phương trình vô nghiệm')
-        } else if (d == 0) {
+        } else if (a == 0) {
             const value = (-c)/b
             console.log('Phương trình này có nghiệm kép là:', value);
         } else {
@@ -113,6 +152,33 @@
             console.log('Phương trình bậc 2 có nghiệm là:', value1, value2);
         }
     }
+
+    // bài 5
+    function tinhhoahong() {
+        const TDS = prompt("TDS")
+        var THH;
+
+        if (TDS <= 100.0) {
+            THH = (TDS * 5) / 100;
+
+            console.log('Tiền hoa hồng là', THH);
+
+        } else if(TDS <= 300.0 && TDS > 100) {
+            THH = (TDS * 10) / 100;
+
+            console.log('Tiền hoa hồng là', THH);
+
+        } else if(TDS > 300.0) {
+            THH = (TDS * 20) / 100;
+
+            console.log('Tiền hoa hồng là', THH);
+
+        } else {
+            alert('Nhập hơi bị nhiều tiền rồi đấy !!')
+        }
+    }
+
+bai5
 </script>
 
 </html>
