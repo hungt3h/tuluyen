@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bt1()">BT1</button>
+    <button onclick="bt2()">BT2</button>
+    <button onclick="bt3()">BT3</button>
+    <button onclick="bt4()">BT4</button>
+    <button onclick="bt5()">BT5</button>
+    <button onclick="VLwhile()">Vòng lặp while </button>
+    <button onclick="test()">Test</button>
+</body>
+
+<script>
+
+    // Bài tập sử dụng vòng lặp for
+    function bt1() {
+        for (let a = 1; a <= 500; a++) {
+            console.log(a);  
+        }
+    }
+
+    function bt2() {
+        for (let a = 1; a <= 300; a++) {
+            if (a % 2 === 0 && a % 3 === 0) {
+                console.log(a);
+            }
+        }
+    }
+
+    function bt3() {
+
+        let sum = 0;
+
+        for (let a = -30; a <= 50; a++) {
+            if (a % 2 === 0) {
+                sum = sum + a;
+            }
+        }
+        console.log(sum);
+    }
+
+
+    // Sử dụng vòng lặp while
+    function VLwhile() {
+
+        let i = 1;
+
+        while (i <= 500) {
+            console.log(i);
+            i++;
+        }
+    }
+
+
+    // break và continue
+    function test() {
+        for (let i = 1; i <= 5; i++) {
+            
+            if (i == 3) {
+            continue;
+            }
+            console.log(i);    
+        }
+    }
+
+    function bt4() {
+        let n;
+        n = Number(n);
+        let GT = 1
+        n = prompt(`Enter N`)
+        for(let i = 1; i <= n; i++){
+            GT = GT * i
+        }
+        console.log(GT);
+    }
+
+    function bt5() {
+        let a = prompt('');
+        let b = prompt('');
+        let x = prompt('');
+
+        for (; a <= b; a++) {
+            if (a % x === 0) {
+                console.log(a);
+            }
+        }
+        
+    }
+    
+</script>
+</html>

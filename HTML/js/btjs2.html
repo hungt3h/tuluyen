@@ -13,12 +13,25 @@
 
     <input id="month" type="number">
     <button onclick="date()">Nhập tháng</button> -->
-    <button onclick="bmi()">Nhập</button>
-    <button onclick="tinhthue()">Tính lương</button>
-    <button onclick="timso()">Nhập số</button>
-    <button onclick="pt()">Tính phương trình</button>
-    <button onclick="tinhhoahong()">Tính tiền hoa hồng</button>
-    
+    <div>
+        Bài 1:<button onclick="bmi()">Nhập</button>
+    </div>
+    <br>
+    <div>
+        Bài 2:<button onclick="tinhthue()">Tính lương</button>
+    </div>
+    <br>
+    <div>
+        Bài 3:<button onclick="timso()">Tìm số lớn nhỏ</button>
+    </div>
+    <br>
+    <div>
+        Bài 4:<button onclick="pt()">Tính phương trình</button>
+    </div>
+    <br>
+    <div>
+        Bài 5:<button onclick="tinhhoahong()">Tính tiền hoa hồng</button>
+    </div>
 </body>
 
 <script>
@@ -104,34 +117,43 @@
         var TTN;
         var LND;
 
-        if (luong == 15.0) {
+        if (luong >= 15.0) {
             TTN = (luong * 30) / 100;
             LND = luong - TTN;
-            console.log('Thuế thu nhập là', TTN);
-            console.log('Số tiền lương thực sự là', LND);
-        } else if(luong <= 15.0 && luong >= 7) {
+        } else if(luong <= 15.0 && luong >= 7.0) {
             TTN = (luong * 20) / 100;
             LND = luong - TTN;
-            console.log('Thuế thu nhập là', TTN);
-            console.log('Số tiền lương thực sự là', LND);
-        } else if(luong < 7) {
+        } else {
             TTN = (luong * 10) / 100;
             LND = luong - TTN;
-            console.log('Thuế thu nhập là', TTN);
-            console.log('Số tiền lương thực sự là', LND);
-        } else {
-            alert('Nhập hơi bị nhiều tiền rồi đấy !!')
         }
+        console.log('Thuế thu nhập là', TTN);
+        console.log('Số tiền lương thực sự là', LND);
     }
 
     // bài 3
     function timso() {
-        var a = prompt('Số thứ nhất')
-        var b = prompt('Số thứ hai')
-        var c = prompt('Số thứ ba')
+        let a, b, c, min, max;
 
-        console.log("Số nhỏ nhất", Math.min(a, b, c));
-        console.log("Số lớn nhất", Math.max(a, b, c));
+        a = prompt('Số thứ nhất')
+        a = Number(a);
+        b = prompt('Số thứ hai')
+        b = Number(b);
+        c = prompt('Số thứ ba')
+        c = Number(c);
+
+        // console.log("Số nhỏ nhất", Math.min(a, b, c));
+        // console.log("Số lớn nhất", Math.max(a, b, c));
+
+        if (b <= a && b <= c) {
+            min = b;
+        } else if (c <= a && c <= b) {
+            min = c;
+        } else {
+            min = a;
+        }
+
+        console.log('min =', min);
     }
     // bai4
     function pt() {
@@ -178,7 +200,6 @@
         }
     }
 
-bai5
 </script>
 
 </html>
