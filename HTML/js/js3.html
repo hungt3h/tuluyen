@@ -13,6 +13,9 @@
     <button onclick="bt5()">BT5</button>
     <button onclick="VLwhile()">Vòng lặp while </button>
     <button onclick="test()">Test</button>
+    <button onclick="bt11()">BT11</button>
+    <button onclick="bt13()">BT13</button>
+    <button onclick="bt15()">BT15</button>
 </body>
 
 <script>
@@ -80,17 +83,92 @@
     }
 
     function bt5() {
-        let a = prompt('');
-        let b = prompt('');
-        let x = prompt('');
+        let a = prompt('Nhap a');
+        let b = prompt('nhap b');
+        let x = prompt('nhap x');
+        var check = 0;
 
-        for (; a <= b; a++) {
-            if (a % x === 0) {
-                console.log(a);
+        for (let i = a; i <= b; i++) {
+            if (i % x === 0) {
+                if (i > check && check != 0) {
+                    console.log('So nho nhat chia het cho x:', check);
+                }
+                check = i;
             }
         }
         
     }
+
+    function bt6() {
+        
+    }
+
+    function bt11() {
+        var numberRandom = Math.floor(Math.random() * 20);
+        var a = 0;
+        var check = 0;
+
+        do {
+            a = prompt('Nhap 1 so');
+            check++;
+            
+            if (a != numberRandom) {
+                console.log('Đoán sai');
+            } else {
+                console.log('Đoán đúng');
+                console.log('So dung la:', numberRandom);
+                break;
+            }
+            
+            if (check == 5) {
+                console.log('Bạn đã thua cuộc');
+                console.log('So dung la:', numberRandom);
+                break;
+            }
+        } while (a != numberRandom);
+        
+    }
+
+
+    function bt13() {
+        var n = 0;
+
+        do {
+            n = prompt('nhap so sao:');
+            if (n < 2) {
+                alert('Nhap lon hon 1 de :))')
+            }
+        } while (n < 2);
+
+        let text = '';
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                text += '*';
+            }
+            text += '\n';
+        }
+        console.log(text);
+    }
     
+    function bt15() {
+        var n = 0;
+
+        do {
+            n = prompt('nhap so sao:');
+            if (n < 3) {
+                alert('Nhap lon hon 1 de :))')
+            }
+        } while (n < 3);
+
+        let text = '';
+        
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j <= i; j++) {
+                text += '*';
+            }
+            text += '\n';
+        }
+        console.log(text);
+    }
 </script>
 </html>
