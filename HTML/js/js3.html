@@ -17,6 +17,7 @@
     
     <button onclick="bt11()">BT11</button>
     <button onclick="bt13()">BT13</button>
+    <button onclick="bt14()">BT14</button>
     <button onclick="bt15()">BT15</button>
 </body>
 
@@ -124,7 +125,7 @@
     }
     function bt11() {
         var numberRandom = Math.floor(Math.random() * 20);
-        var a = 0;
+        var a;
         var check = 0;
 
         do {
@@ -148,6 +149,19 @@
         
     }
 
+    function bt12() {
+        var n;
+        var m;
+
+        let text = '';
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < n; j++) {
+                text += '*';
+            }
+            text += '\n';
+        }
+        console.log(text);
+    }
 
     function bt13() {
         var n = 0;
@@ -168,7 +182,29 @@
         }
         console.log(text);
     }
-    
+
+    function bt14() {
+        var m;
+        var n;
+
+        do {
+            m = prompt('Nhập số sao chiều dài:');
+            n = prompt('Nhập số sao chiều dọc:');
+            if (n < 2 && m < 2) {
+                alert('Nhập số sao lớn hơn 1 đê :))');
+            }
+        } while (n < 2 && m < 2);
+
+        let text = '';
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= m; j++) {
+                document.write('*')
+            }
+            document.write('<br/>')
+        }
+    }
+
+
     function bt15() {
         var n = 0;
 
