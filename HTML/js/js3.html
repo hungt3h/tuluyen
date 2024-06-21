@@ -6,13 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+    <button onclick="VLwhile()">Vòng lặp while </button>
+    <button onclick="test()">Test break và continue</button>
     <button onclick="bt1()">BT1</button>
     <button onclick="bt2()">BT2</button>
     <button onclick="bt3()">BT3</button>
     <button onclick="bt4()">BT4</button>
     <button onclick="bt5()">BT5</button>
-    <button onclick="VLwhile()">Vòng lặp while </button>
-    <button onclick="test()">Test</button>
+    <button onclick="bt8()">BT8</button>
+    
     <button onclick="bt11()">BT11</button>
     <button onclick="bt13()">BT13</button>
     <button onclick="bt15()">BT15</button>
@@ -75,7 +77,7 @@
         let n;
         n = Number(n);
         let GT = 1
-        n = prompt(`Enter N`)
+        n = prompt('Nhập n')
         for(let i = 1; i <= n; i++){
             GT = GT * i
         }
@@ -83,15 +85,15 @@
     }
 
     function bt5() {
-        let a = prompt('Nhap a');
-        let b = prompt('nhap b');
-        let x = prompt('nhap x');
+        let a = prompt('Nhập a');
+        let b = prompt('Nhập b');
+        let x = prompt('Nhập x');
         var check = 0;
 
         for (let i = a; i <= b; i++) {
             if (i % x === 0) {
                 if (i > check && check != 0) {
-                    console.log('So nho nhat chia het cho x:', check);
+                    console.log('Số nhỏ nhất chia hết cho x:', check);
                 }
                 check = i;
             }
@@ -103,26 +105,43 @@
         
     }
 
+
+    function bt8() {
+        let n = prompt('nhập n')
+        let count = 0;
+
+        for (let i = 0; i <= n; i++) {
+            if (n % 1 === 0) {
+                count++;
+            }
+        }
+
+        if (count === 2) {
+            console.log(n, 'là số nguyên tố');
+        } else {
+            console.log(n, 'không phải là số nguyên tố');
+        }
+    }
     function bt11() {
         var numberRandom = Math.floor(Math.random() * 20);
         var a = 0;
         var check = 0;
 
         do {
-            a = prompt('Nhap 1 so');
+            a = prompt('Nhập số mà bạn đoán:');
             check++;
             
             if (a != numberRandom) {
                 console.log('Đoán sai');
             } else {
                 console.log('Đoán đúng');
-                console.log('So dung la:', numberRandom);
+                console.log('Số đúng là:', numberRandom);
                 break;
             }
             
             if (check == 5) {
                 console.log('Bạn đã thua cuộc');
-                console.log('So dung la:', numberRandom);
+                console.log('Số đúng là:', numberRandom);
                 break;
             }
         } while (a != numberRandom);
@@ -134,9 +153,9 @@
         var n = 0;
 
         do {
-            n = prompt('nhap so sao:');
+            n = prompt('Nhập số sao:');
             if (n < 2) {
-                alert('Nhap lon hon 1 de :))')
+                alert('Nhập số sao lớn hơn 1 đê :))');
             }
         } while (n < 2);
 
@@ -154,9 +173,9 @@
         var n = 0;
 
         do {
-            n = prompt('nhap so sao:');
+            n = prompt('Nhập số sao:');
             if (n < 3) {
-                alert('Nhap lon hon 1 de :))')
+                alert('Nhập số sao lớn hơn 1 đê :))');
             }
         } while (n < 3);
 
