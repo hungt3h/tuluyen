@@ -3,9 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array</title>
 </head>
 <body>
-    
+    <button onclick="truyxuat()">Truy xuất</button>
+    <button onclick="inmang()">In</button>
+    <button onclick="Thaotac()">Thêm sửa xóa</button>
+    <button onclick="songuyento()">Tìm số nguyên tố</button>
+    <button onclick="bt1()">BT1</button>
+    <button onclick="bt2()">BT2</button>
 </body>
+
+<script>
+    function truyxuat() {
+        // Cách 1
+
+        // Mảng rỗng
+        const numbers = [];
+
+        // Mảng có các phần tử bên trong
+        const listname1 = ['nguyễn văn a', 'trần thị b', 'vũ văn c'];
+
+        // Cách 2
+        // mảng rỗng
+        const listname2 = new Array('nguyễn văn a', 'trần thị b', 'vũ văn c');
+
+        console.log(listname2);
+        console.log(listname2[1]);
+        listname2[1] = 'trân thị bảnh';
+        console.log(listname2[1]);
+
+        // console.log(listname2[3]);
+    }
+
+    function inmang() {
+        const listname = ['nguyễn văn a', 'trần thị b', 'vũ văn c'];
+
+        for (let i = 0; i < listname.length; i++) {
+            console.log(i);
+            console.log(listname[i]);
+            
+        }
+    }
+
+    function Thaotac() {
+        const number = [1, 2, 3];
+
+        console.log(number);
+
+        // // Thêm phần tử cuối mảng
+        // number.push(4, 5);
+        // console.log('Thêm cuối', number);
+
+        // // Thêm phần tử đầu mảng
+        // number.unshift(0);
+        // console.log('Thêm đầu', number);
+
+        // // Xóa phần tử cuối mảng
+        // number.pop();
+        // number.pop();
+        // console.log('Xóa cuối', number);
+
+        // // Xóa phần tử đầu mảng
+        // number.shift();
+        // number.shift();
+        // console.log('Xóa đầu', number);
+
+        // Thao tác với vị trí bất kì
+        // // Sử dụng để xóa
+        // number.splice(0, 2);
+        // console.log(number);
+
+        // // Sử dụng để thêm
+        // number.splice(2, 0, 'a', 'b', 'c');
+        // console.log(number);
+
+    }
+
+    function bt1() {
+        const numbers = [5, 2, 7, 4]
+
+        console.log(numbers[0], numbers[3]);
+        
+        const sum = numbers[1] + numbers[2];
+
+        console.log(sum);
+
+        const temp = numbers[1]
+        numbers[1] = numbers[3];
+        numbers[3] = temp;
+
+        console.log(numbers);
+    }
+
+    function bt2() {
+        const numbers = [5, 2, 7, 4];
+
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 === 0) {
+                console.log('Số chắn trong mảng', numbers[i]);
+            }
+        }
+
+        let sum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            sum = sum + numbers[i];
+        }
+        console.log('tong: ', sum);
+
+        let min = numbers[0];
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] < min) {
+                min = numbers[i]
+            }
+        }
+        console.log('min: ', min);
+    }
+
+    
+</script>
+
 </html>
