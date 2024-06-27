@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bt1()">BT1</button>
+    <button onclick="doanSo()"> doan so trong mang</button>
+</body>
+
+<script>
+    function bt1() {
+        const numbers = [9, 10, 2, 3, 5, 222, 6, 7, 8,  14, 4, 11, 29, 101];
+        // khai bao Tính tích của các phần tử trong mảng
+        var tich = numbers[0];
+
+        // khai bao Tìm số nhỏ nhất mà chia hết cho 2 trong mảng
+        let min = numbers[0];
+
+        // Khai bao Tìm số nhỏ nhất mà chia hết cho 2 trong mảng.
+        let max = numbers[0];
+
+        // Khai bao Tính giá trị trung bình của mảng.
+        let sum = numbers[0];
+
+        // Khai bao Lọc ra các số nguyên tố trong mảng.
+        let tongPhanTu = 0;
+        let count = 0;
+        const SNT = [];
+
+        // Khai bao Kiểm tra xem trong mảng có số nhỏ hơn 10 hay không.
+        const soNhoHon10 = [];
+
+        // Khai bao Kiểm tra xem tất cả phần tử trong mảng có lớn hơn 20 không.
+        const soNhoHon20 = [];
+
+        
+
+        for (let i = 0; i < numbers.length; i++) {
+            tongPhanTu++;
+
+            // Tính tích của các phần tử trong mảng đó.
+            if (i != 0) {
+                tich = tich * numbers[i];
+
+                // Tính giá trị trung bình của mảng.               
+                sum = sum + numbers[i];
+            }
+
+            // Tìm số nhỏ nhất mà chia hết cho 2 trong mảng.
+            if (numbers[i] % 2 === 0 && numbers[i] < min) {
+                min = numbers[i]; 
+            }
+
+            // Tìm số lớn nhất mà chia hết cho 3 trong mảng.
+            if (numbers[i] % 3 === 0 && numbers[i] > max) {
+                max = numbers[i]; 
+            }
+
+            // Lọc ra các số nguyên tố trong mảng.
+            if (numbers[i] % 1 === 0) {
+                count++;
+            }
+
+            if (count === 2) {
+                SNT.push(numbers[i]);
+                count = 0;
+            }
+
+            // Kiểm tra xem trong mảng có số nhỏ hơn 10 hay không.
+            if (numbers[i] < 10) {
+                
+                soNhoHon10.push(numbers[i]);
+            }
+
+            // Kiểm tra xem tất cả phần tử trong mảng có lớn hơn 20 không.
+            if (numbers[i] > 20) {
+                soNhoHon20.push(numbers[i]);
+            }
+        }
+
+            
+
+        console.log('Tich bang:', tich);
+        console.log('So nho nhat chia het cho 2 la:', min);
+        console.log('So lon nhat chia het cho 3 la:', max);
+        console.log('So trung binh la:', sum / tongPhanTu);
+        console.log('Cac số nguyên tố trong mang la:', SNT);
+        console.log('Cac số nhỏ hơn 10:', soNhoHon10);
+        console.log('Cac số lớn hơn 20:', soNhoHon20);
+
+    }
+
+    function doanSo() {
+        // Khai bao Nhập vào số n cho đến khi n là 1 số trong mảng
+        const numbers = [9, 10, 2, 3, 5, 222, 6, 7, 8,  14, 4, 11, 29, 101];
+        var n = prompt('Nhap');
+
+        // Nhập vào số n cho đến khi n là 1 số trong mảng
+        for (let i = 0; i < numbers.length; i++) {
+            if (n == numbers[i]) {
+                alert('Chuan');
+                break;
+            } else {
+                alert('Nhap lai de');
+                break;
+            }
+        }
+    }
+</script>
+
+</html>
