@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT Object & Function</title>
+    <style>
+        table {
+            width: 40%;
+        }
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input class="search" type="search"><br><br>
+    <button onclick="search()">Tìm sinh viên</button>
+    <button onclick="filter()">Lọc tuổi và điểm</button>
+    <button onclick="filterAge()">Lọc tuổi</button>
+    <button onclick="filterGrade()">Lọc điểm</button>
+    <button onclick="convert()">Chuyển đổi</button>
+    <button onclick="sumAge()">Tổng số tuổi của sinh viên</button>
+    <div class="">
+        <form action="" onsubmit="add()">
+            <br>
+            <label>Tên sinh viên:</label>
+            <input class="name" type="text" ><br><br>
+            <label>Tuổi:</label>
+            <input class="age" type="number"><br><br>
+            <label>Điểm:</label>
+            <input class="grade" type="text"><br><br>
+            <button type="submit">Thêm mới</button>
+        </form>
+        <br>
+        <table id="students"></table>
+        <div id="search"></div>
+        <div id="sum"></div>
+    </div>
+</body>
+
+<script>
+    const students = [
+        { name: "Nguyen Van A", age: 20, grade: "A" },
+        { name: "Tran Thi B", age: 22, grade: "B" },
+        { name: "Le Van C", age: 21, grade: "C" },
+        { name: "Le Van D", age: 21, grade: "A" }
+    ];
+
+    innerContenTable(students);
+
+    function innerContenTable(dataTable) {
+        var contentTable = `
+            <tr>
+                <th>Tên sinh viên</th>
+                <th>Tuổi</th>
+                <th>Điểm</th>
+            </tr>
+        `;
+
+        dataTable.forEach(element => {
+            contentTable += `
+                <tr>
+                    <td>${element.name}</td>
+                    <td>${element.age}</td>
+                    <td>${element.grade}</td>
+                </tr>
+            `;
+        });
+
+        document.getElementById('students').innerHTML = contentTable;
+    }
+
+    function innerContenTableName(dataTable) {
+        var contentTable = `
+            <tr>
+                <th>Tên sinh viên</th>
+            </tr>
+        `;
+
+        dataTable.forEach(element => {
+            contentTable += `
+                <tr>
+                    <td>${element.name}</td>
+                </tr>
+            `;
+        });
+
+        document.getElementById('students').innerHTML = contentTable;
+    }
+
+    function add() {
+        event.preventDefault();
+        const name = document.querySelector('.name').value;
+        const age = document.querySelector('.age').value;
+        const grade = document.querySelector('.grade').value;
+
+        students.push({ name: name, age: age, grade: grade });
+        innerContenTable(students);
+    }
+
+    function search() {
+        event.preventDefault();
+        const search = document.querySelector('.search').value.toLocaleLowerCase();
+        const student = students.find(item => item.name.toLocaleLowerCase().includes(search) || item.age == search || item.grade.toLocaleLowerCase().includes(search));
+        
+        searchContent = `
+            <span>Tên: ${student.name}</span>
+            <br>
+            <span>Tuổi: ${student.age}</span>
+        `; 
+        document.querySelector('#search').innerHTML = searchContent;
+    }
+
+    function filterAge() {
+        const newStudents = students.filter(item => item.age > 20);
+        innerContenTable(newStudents);
+    }
+
+    function filterGrade() {
+        const newStudents = students.filter(item => item.grade == 'A');
+        innerContenTable(newStudents);
+    }
+
+    function filter() {
+        const newStudents = students.filter(item => item.grade == 'A' && item.age > 20);
+        innerContenTable(newStudents);
+    }
+
+    function convert() {
+        const newStudents = students.map(item => {
+            return {name: item.name}
+        });
+        innerContenTableName(newStudents);
+        console.log(newStudents);
+
+    }
+
+    function sumAge() {
+        var sumAge = 0;
+        students.forEach(element => {
+            sumAge = sumAge + element.age;
+        });
+
+    document.getElementById('sum').innerHTML = `Tổng số tuổi của sinh viên là: ${sumAge}`;
+    }
+</script>
+
+</html>
